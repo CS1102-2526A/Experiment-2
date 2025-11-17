@@ -1,138 +1,258 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Experiment 1</title>
-    <style>
-        body {
-                background-color: #FFFAF0;
-        }
-        h1 {
-            text-align: center;
-            font-size: 20px;
-        }
-        h2 {
-            font-size: 20px;
-        }
-        h3 {
-            font-size: 30px;
-        }
+<title>Experiment 1</title>
+<style>
+body {
+background-color: #FFFAF0;
+}
+        
+h1 {
+text-align: center;
+font-size: 20px;
+}
+        
+h2 {
+font-size: 20px;
+}
+        
+h3 {
+font-size: 30px;
+}
 
-        .left {
-            width: 100px;
-            height: 100px;
-            background: red;
-            left: 150px;
-            top: 30px;
-            position: absolute;
-            border-radius: 5px;
-        }
+.drop-left {
+width: 50px;
+height: 50px;
+background-color: rgb(165,161,18);
+left: 175px;
+top: 50px;
+position: absolute;
+border-radius: 5px;
+}
 
-        .right {
-            width: 100px;
-            height: 100px;
-            background: blue;
-            left: 350px;
-            top: 30px;
-            position: absolute;
-            border-radius: 5px;
-        }
+.left {
+width: 100px;
+height: 100px;
+background-color: transparent;
+left: 150px;
+top: 125px;
+position: absolute;
+border-radius: 5px;
+border: 2px solid grey;
+}
 
-        .bottom {
-            width: 300px;
-            height: 100px;
-            background-color: purple;
-            top: 200px;
-            left: 150px;
-            position: absolute;
-            border-radius: 5px;
-        }
+.drop-right {
+width: 50px;
+height: 50px;
+background-color: rgb(165,161,18);
+left: 375px;
+top: 50px;
+position: absolute;
+border-radius: 5px;
+}
 
-        .box {
-            position: relative;
-            height: 350px;
-            width: 600px;
-            border: 1px solid grey;
-            background-color: white;
-            margin: 45px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
+.right {
+width: 100px;
+height: 100px;
+background-color: transparent;
+left: 350px;
+top: 125px;
+position: absolute;
+border-radius: 5px;
+border: 2px solid grey;
+}
+        
+.middle {
+width: 103px;
+height: 103px;
+background-color: transparent;
+top: 125px;
+left: 250px;
+position: absolute;
+border-radius: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+color: white;
+}
 
-        @keyframes acid {
-            from { top: 30px; }
-            to { top: 200px; background-color: transparent; }
-        }
+.box {
+position: relative;
+height: 350px;
+width: 600px;
+border: 1px solid grey;
+background-color: white;
+margin: 45px;
+border-radius: 10px;
+overflow: hidden;
+}
 
-        @keyframes base {
-            from { top: 30px; }
-            to { top: 200px; background-color: transparent; }
-        }
+@keyframes dropacid {
+0% {top: 50px;}
+40% {top: 125px; background-color: transparent;}
+100% {top: 125px; background-color: transparent;}
+}
 
-        @keyframes indicator {
-            0% { background-color: purple; }
-            55% { background-color: purple; }
-            100% { background-color: yellow; }
-        }
+@keyframes acid {
+0% {top: 125px;}
+85% {top: 125px; background-color: pink; color: white;}
+100% {top: 125px; left: 250px; background-color: transparent; border: 2px solid transparent; color: transparent;}
+}
 
-        .left-acid {
-            animation: acid 5s forwards;
-        }
+@keyframes dropbase {
+0% {top: 50px;}
+40% {top: 125px; background-color: transparent;}
+100% {top: 125px; background-color: transparent;}
+}
 
-        .right-base {
-            animation: base 5s forwards;
-        }
+@keyframes base {
+0% {top: 125px;}
+85% {top: 125px; background-color: purple; color: white;}
+100% {top: 125px; left: 250px; background-color:transparent; border: 2px solid transparent; color: transparent;}
+}
+        
+@keyframes mixture {
+0% {top: 125px; background-color: transparent; color: transparent;}
+60% {top: 125px; background-color: transparent; color: transparent;}
+100% {top: 125px; background-color: green;}
+}
 
-        .bottom-indicator {
-            animation: indicator 5s forwards;
-        }
-    </style>
+.drop-acid {
+animation: dropacid 2s forwards;
+}
+
+.left-acid {
+animation: acid 4s forwards;
+}
+
+.drop-base {
+animation: dropbase 2s forwards;
+}
+
+.right-base {
+animation: base 4s forwards;
+}
+        
+.middle-mixture {
+animation: mixture 5s forwards;
+}
+        
+.left, .drop-left, .drop-right, .right {
+position: absolute;
+border-radius: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+color: grey;
+}
+        
+span {
+font-weight: bold;
+}
+        
+#text1 {
+text-align: center;
+}
+        
+table, th, td {
+border:1px solid black;
+text-align: center;
+}
+</style>
 </head>
 <body>
-    <h1>CS1102 - Simulated Chemistory Reaction - 2025/2026 Semester A<br/>
-        <br/>Experiment 1<br/>
-        <br/>Tong Wing Yan 57905703, Tam Wing Nga 58196547, Wong Cheuk Wing 58112774, Wong Ching Yu 58620001
-    </h1>
-    <br/>
+<h1>
+<br/>CS1102 - Simulated Chemistory Reaction - 2025/2026 Semester A<br/>
+<br/>Experiment 2 - Observing a Neutralisation Reaction with Universal Indicator<br/>
+<br/>Tong Wing Yan 57905703, Tam Wing Nga 58196547, Wong Cheuk Wing 58112774, Wong Ching Yu 58620001<br/>
+</h1><br/>
    
-    <h2><a href="https://cs1102-2526a.github.io/main/">Return Home Page</a></h2>
-    <br/>
+<h2><a href="https://cs1102-2526a.github.io/main/">Return Home Page</a></h2><br/>
    
-    <h3>Bridge Camera</h3>
-    <p>XXX</p>
-    <h3>Click the button to check what color there is.</h3>
-    <button onclick="startAnimation()">Check it now!</button>
-       
-    <br/>
-    <div class="box">
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="bottom"></div>
-    </div>
+<p>Under the same conditions as Experiment 1, we are going to observe the acid-base reaction between hydrochloric acid (HCl) and sodium hydroxide (NaOH). When HCl and NaOH are combined, these two chemicals react in a neutralisation reaction and form sodium chloride (NaCl), which is commonly defined as table salt, and water (H₂O). The chemical equation is:</p>
 
-    <script>
-        function startAnimation() {
+<div id="text1">HCl + NaOH → NaCl + H₂O</div><br/>
 
-            const left = document.querySelector('.left');
-            const right = document.querySelector('.right');
-            const bottom = document.querySelector('.bottom');
+<h3>What is neutralisation?</h3>
+<p>When there is an exact amount of both alkali and acid mixed, they will cancel each other out and form a neutral solution. The reaction is called neutralisation.</p> 
 
-            left.classList.remove('left-acid');
-            right.classList.remove('right-base');
-            bottom.classList.remove('bottom-indicator');
+<p><span>Common Examples of neutralization in our daily life</span></p>
+<ol>
+<li><span>Personal Health &amp; Hygiene</span></li>
+<ul>
+<li><span>Relief from a Stomach Upset:</span> The stomach produces hydrochloric acid for digestion. When your stomach has too much acid, you can make use of antacid tablets, which contain alkalis, to neutralize the extra acid.</li>
+<li><span>Prevent Cavity:</span> Do you know that germs produce acid in your mouth, which can damage teeth? It is important to brush your teeth using toothpaste as it contains slightly alkaline ingredients, to help cancel out these harmful acids and keep your teeth strong.</li>
+</ul><br/>
+<li><span>Household Cleaning</span></li>
+<ul>
+<li><span>Eliminate Limescale:</span> Limescale is an alkaline ingredient. You can make use of cleaning products with weak acids, such as vinegar, to dissolve the stains through the neutralization reaction.</li>
+</ul>
+</ol><br/>
+<h3>Using Universal indicator</h3>
+<p>Universal Indicator is a pH indicator made from a mixture of several chemical solutions. There are two common universal indicators: Universal Indicator Solution and Universal Indicator Paper. </p>
+<p>It is different from the litmus paper we have introduced in Experiment 1. Universal Indicator not only can find out whether the solution is an acid, an alkali or neutral, but also can determine the pH value (pH 0 to pH 14) of the solution by comparing with the pH colour chart.</p>
+<ul>
+<li>Acid solutions: &gt; pH value of 7 (from light green to red)</li>
+<li>Neutral solutions: = pH value of 7 (green)</li>
+<li>Alkaline solution: &lt; pH value of 7 (from dark green to dark purple)</li>
+</ul>
+<p>When the pH value is closer to pH 0, the stronger the acidic solution is.</p>
+<p>When the pH value is closer to pH 14, the stronger the alkaline solution is.</p><br/>
+<h3>Simulation</h3>
+<p>Step 1: Add the universal indicator solution to the same amount of HCl and NaOH respectively.</p> 
+<p>Step 2:</p> 
+<ul>
+<li>Mix the universal indicator solution with HCl, and the colour of HCl changes from transparent to pink, indicating that HCl is an acidic solution with a pH value of 2.</li>
+<li>Mix the universal indicator solution with NaOH, and the colour of NaOH changes from transparent to purple, indicating that NaOH is an acidic solution with a pH value of 13.</li>
+</ul>
+<p>Please note that the colour of the mixture of universal indicator solution and chemical solution is determined by the chemical solution's concentration. The colour display in the simulation may differ from the real situation.</p>
+<p>Step 3: Mix the two mixtures, and it becomes a green solution, which is a neutral solution (pH value of 7) after comparing with the pH colour chart.</p><br/>
+<p><span>Click the button to check what color there is.</span></p>
+<button onclick="startAnimation()">Check it now!</button>
+<p>Please note that the distinct colour in the following simulation is for clear demonstration only.</p>
+<div class="box">
+<div class="drop-left"></div>
+<div class="left">HCl</div>
+<div class="drop-right"></div>
+<div class="right">NaOH</div>
+<div class="middle">NaCl + H₂O</div>
+</div>
+
+
+<script>
+function startAnimation() {
+const dropLeft = document.querySelector('.drop-left');
+const left = document.querySelector('.left');
+const dropRight = document.querySelector('.drop-right');
+const right = document.querySelector('.right');
+const middle = document.querySelector('.middle');
+
+dropLeft.classList.remove('drop-acid');
+left.classList.remove('left-acid');
+dropRight.classList.remove('drop-base');
+right.classList.remove('right-base');
+middle.classList.remove('middle-mixture');
             
-            void left.offsetHeight;
-            void right.offsetHeight;
-            void bottom.offsetHeight;
+void dropLeft.offsetHeight;
+void left.offsetHeight;
+void dropRight.offsetHeight;
+void right.offsetHeight;
+void middle.offsetHeight;
             
-            void left.offsetWidth;
-            void right.offsetWidth;
-            void bottom.offsetWidth;
-            
-            // Add animation classes
-            left.classList.add('left-acid');
-            right.classList.add('right-base');
-            bottom.classList.add('bottom-indicator');
-        }
-    </script>
+void dropLeft.offsetWidth;
+void left.offsetWidth;
+void dropRight.offsetWidth;
+void right.offsetWidth;
+void middle.offsetWidth;
+
+dropLeft.classList.add('drop-acid');
+left.classList.add('left-acid');
+dropRight.classList.add('drop-base');
+right.classList.add('right-base');
+middle.classList.add('middle-mixture');
+}
+</script>
 </body>
 </html>
