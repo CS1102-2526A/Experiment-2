@@ -1,255 +1,253 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Experiment 2</title>
+<title>Experiment 1</title>
 <style>
-body {
-background-color: #FFFAF0;
-font-family: Times New Roman;        
-}
+	header {
+		background-color:#FFFAF0;
+		padding: 1px;
+		text-align: center;
+	}
+	
+	p {
+		font-size: 18px;
+	}
+					
+	body {
+		font-family: "Times New Roman";
+	    background-color: #FFFAF0
+	}
+					
+	h1 {
+		font-size: 25px;
+		padding: 10px;
+		display:inline-block;
+	}
+	
+	h3 {
+		font-size: 15px;
+	}
+	
+	.drop-left {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(165,161,18);
+        left: 175px;
+        top: 50px;
+        position: absolute;
+        border-radius: 5px;
+        }
         
-h1 {
-text-align: center;
-font-size: 20px;
-}
+        .left {
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+        left: 150px;
+        top: 125px;
+        position: absolute;
+        border-radius: 5px;
+        border: 2px solid grey;
+        }
         
-h2 {
-font-size: 20px;
-}
+        .drop-right {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(165,161,18);
+        left: 375px;
+        top: 50px;
+        position: absolute;
+        border-radius: 5px;
+        }
         
-h3 {
-font-size: 30px;
-}
-
-.drop-left {
-width: 50px;
-height: 50px;
-background-color: rgb(165,161,18);
-left: 175px;
-top: 50px;
-position: absolute;
-border-radius: 5px;
-}
-
-.left {
-width: 100px;
-height: 100px;
-background-color: transparent;
-left: 150px;
-top: 125px;
-position: absolute;
-border-radius: 5px;
-border: 2px solid grey;
-}
-
-.drop-right {
-width: 50px;
-height: 50px;
-background-color: rgb(165,161,18);
-left: 375px;
-top: 50px;
-position: absolute;
-border-radius: 5px;
-}
-
-.right {
-width: 100px;
-height: 100px;
-background-color: transparent;
-left: 350px;
-top: 125px;
-position: absolute;
-border-radius: 5px;
-border: 2px solid grey;
-}
+        .right {
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+        left: 350px;
+        top: 125px;
+        position: absolute;
+        border-radius: 5px;
+        border: 2px solid grey;
+        }
+                
+        .middle {
+        width: 103px;
+        height: 103px;
+        background-color: transparent;
+        top: 125px;
+        left: 250px;
+        position: absolute;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+        }
         
-.middle {
-width: 103px;
-height: 103px;
-background-color: transparent;
-top: 125px;
-left: 250px;
-position: absolute;
-border-radius: 5px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-weight: bold;
-color: white;
-}
-
-.box {
-position: relative;
-height: 350px;
-width: 600px;
-border: 1px solid grey;
-background-color: white;
-margin: 45px;
-border-radius: 10px;
-overflow: hidden;
-}
-
-@keyframes dropacid {
-0% {top: 50px;}
-40% {top: 125px; background-color: transparent;}
-100% {top: 125px; background-color: transparent;}
-}
-
-@keyframes acid {
-0% {top: 125px;}
-85% {top: 125px; background-color: pink; color: white;}
-100% {top: 125px; left: 250px; background-color: transparent; border: 2px solid transparent; color: transparent;}
-}
-
-@keyframes dropbase {
-0% {top: 50px;}
-40% {top: 125px; background-color: transparent;}
-100% {top: 125px; background-color: transparent;}
-}
-
-@keyframes base {
-0% {top: 125px;}
-85% {top: 125px; background-color: purple; color: white;}
-100% {top: 125px; left: 250px; background-color:transparent; border: 2px solid transparent; color: transparent;}
-}
+        .box {
+        position: relative;
+        height: 350px;
+        width: 600px;
+        border: 1px solid grey;
+        background-color: white;
+        margin: 45px;
+        border-radius: 10px;
+        overflow: hidden;
+        }
         
-@keyframes mixture {
-0% {top: 125px; background-color: transparent; color: transparent;}
-60% {top: 125px; background-color: transparent; color: transparent;}
-100% {top: 125px; background-color: green;}
-}
-
-.drop-acid {
-animation: dropacid 2s forwards;
-}
-
-.left-acid {
-animation: acid 4s forwards;
-}
-
-.drop-base {
-animation: dropbase 2s forwards;
-}
-
-.right-base {
-animation: base 4s forwards;
-}
+        @keyframes dropacid {
+        0% {top: 50px;}
+        40% {top: 125px; background-color: transparent;}
+        100% {top: 125px; background-color: transparent;}
+        }
         
-.middle-mixture {
-animation: mixture 5s forwards;
-}
+        @keyframes acid {
+        0% {top: 125px;}
+        85% {top: 125px; background-color: pink; color: white;}
+        100% {top: 125px; left: 250px; background-color: transparent; border: 2px solid transparent; color: transparent;}
+        }
         
-.left, .drop-left, .drop-right, .right {
-position: absolute;
-border-radius: 5px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-weight: bold;
-color: grey;
-}
+        @keyframes dropbase {
+        0% {top: 50px;}
+        40% {top: 125px; background-color: transparent;}
+        100% {top: 125px; background-color: transparent;}
+        }
         
-span {
-font-weight: bold;
-}
+        @keyframes base {
+        0% {top: 125px;}
+        85% {top: 125px; background-color: purple; color: white;}
+        100% {top: 125px; left: 250px; background-color:transparent; border: 2px solid transparent; color: transparent;}
+        }
+                
+        @keyframes mixture {
+        0% {top: 125px; background-color: transparent; color: transparent;}
+        60% {top: 125px; background-color: transparent; color: transparent;}
+        100% {top: 125px; background-color: green;}
+        }
         
-#text1 {
-text-align: center;
-}
+        .drop-acid {
+        animation: dropacid 2s forwards;
+        }
         
-table, th, td {
-border:1px solid black;
-text-align: center;
-}
+        .left-acid {
+        animation: acid 4s forwards;
+        }
+        
+        .drop-base {
+        animation: dropbase 2s forwards;
+        }
+        
+        .right-base {
+        animation: base 4s forwards;
+        }
+                
+        .middle-mixture {
+        animation: mixture 5s forwards;
+        }
+                
+        .left, .drop-left, .drop-right, .right {
+        position: absolute;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: grey;
+        }
+	        
+	span {
+		font-weight: bold;
+	}
+	        
+	#text1 {
+		text-align: center;
+	}
+	        
+	table, th, td {
+		border:1px solid black;
+		text-align: center;
+	}
 </style>
 </head>
+
 <body>
-<h1>
-<br/>CS1102 - Simulated Chemistory Reaction - 2025/2026 Semester A<br/>
-<br/>Experiment 2 - Observing a Neutralisation Reaction with Universal Indicator<br/>
-<br/>Tong Wing Yan 57905703, Tam Wing Nga 58196547, Wong Cheuk Wing 58112774, Wong Ching Yu 58620001<br/>
-<br/>MON 15:00-15:50 Project Group 6<br/>
-</h1><br/>
-   
-<h2><a href="https://cs1102-2526a.github.io/index/">Return Home Page</a></h2><br/>
-   
-<p>Under the same conditions as Experiment 1, we are going to observe the acid-base reaction between hydrochloric acid (HCl) and sodium hydroxide (NaOH). When HCl and NaOH are combined, these two chemicals react in a neutralisation reaction and form sodium chloride (NaCl), which is commonly defined as table salt, and water (H₂O). The chemical equation is:</p>
-
-<div id="text1">HCl + NaOH → NaCl + H₂O</div><br/>
-
-<h3>Using Universal indicator</h3>
-<p>Universal Indicator is a pH indicator made from a mixture of several chemical solutions. There are two common universal indicators: Universal Indicator Solution and Universal Indicator Paper. </p>
-<p>It is different from the litmus paper we have introduced in Experiment 1. Universal Indicator not only can find out whether the solution is an acid, an alkali or neutral, but also can determine the pH value (pH 0 to pH 14) of the solution by comparing with the pH colour chart.</p>
-
-<img scr="https://i0.wp.com/www.compoundchem.com/wp-content/uploads/2014/04/Colourful-Chemistry-Colours-of-pH-Indicators.png?ssl=1">
-<p>(Source: Compound Interest https://www.compoundchem.com/2014/04/04/the-colours-chemistry-of-ph-indicators/)</p>
+	<header>
+	<h1>CS1102 - Simulated Chemistry Reaction - 2025/2026 Semester A<br/>
+	<br/>Experiment 1 - Observing a Neutralization Reaction with Litmusn<br/>
+	<br/>Tong Wing Yan 57905703, Tam Wing Nga 58196547, Wong Cheuk Wing 58112774, Wong Ching Yu 58620001 <br/>
+	<br/>MON 15:00-15:50 Project Group 6 </h1>
+	</header>
+	   
+	<h2><a href="https://cs1102-2526a.github.io/index/">Return Home Page</a></h2><br/>
+	   
+	<p>Under the same conditions as Experiment 1, we are going to observe the acid-base reaction between hydrochloric acid (HCl) and sodium hydroxide (NaOH). When HCl and NaOH are combined, these two chemicals react in a neutralisation reaction and form sodium chloride (NaCl), which is commonly defined as table salt, and water (H₂O). The chemical equation is:</p>
+	
+	<div id="text1">HCl + NaOH → NaCl + H₂O</div><br/>
+	
+	<h2 style="color:black;"><u>Using Universal indicator</u></h2>
+		<p>Universal Indicator is a pH indicator made from a mixture of several chemical solutions. There are two common universal indicators: Universal Indicator Solution and Universal Indicator Paper.<p>
+		<p>It is different from the litmus paper we have introduced in Experiment 1. Universal Indicator not only can find out whether the solution is an acid, an alkali or neutral, but also can determine the pH value (pH 0 to pH 14) of the solution by comparing it with the pH colour chart.</p> 
+		
+        <img src="https://i0.wp.com/www.compoundchem.com/wp-content/uploads/2014/04/Colourful-Chemistry-Colours-of-pH-Indicators.png?ssl=1" alt="pH Indicator Colours" width="600"/>
+ <p>(Source: Compound Interest <a href="https://www.compoundchem.com/2014/04/04/the-colours-chemistry-of-ph-indicators/ ">https://www.compoundchem.com/2014/04/04/the-colours-chemistry-of-ph-indicators/</a>)</p><br/>
         
-<ul>
-<li>Acid solutions: &gt; pH value of 7 (from light green to red)</li>
-<li>Neutral solutions: = pH value of 7 (green)</li>
-<li>Alkaline solution: &lt; pH value of 7 (from dark green to dark purple)</li>
-</ul>
-<p>When the pH value is closer to pH 0, the stronger the acidic solution is.</p>
-<p>When the pH value is closer to pH 14, the stronger the alkaline solution is.</p><br/>
-<h3>Simulation</h3>
-<p>Step 1: Add the universal indicator solution to the same amount of HCl and NaOH respectively.</p> 
-<p>Step 2:</p> 
-<ul>
-<li>Mix the universal indicator solution with HCl, and the colour of HCl changes from transparent to pink, indicating that HCl is an acidic solution with a pH value of 2.</li>
-<li>Mix the universal indicator solution with NaOH, and the colour of NaOH changes from transparent to purple, indicating that NaOH is an acidic solution with a pH value of 13.</li>
-</ul>
-<p>Please note that the colour of the mixture of universal indicator solution and chemical solution is determined by the chemical solution's concentration. The colour display in the simulation may differ from the real situation.</p>
-<p>Step 3: Mix the two mixtures, and it becomes a green solution, which is a neutral solution (pH value of 7) after comparing with the pH colour chart.</p><br/>
-<p><span>Click the button to check what color there is.</span></p>
-<button onclick="startAnimation()">Check it now!</button>
-<p>Please note that the distinct colour in the following simulation is for clear demonstration only.</p>
-<div class="box">
-<div class="drop-left"></div>
-<div class="left">HCl</div>
-<div class="drop-right"></div>
-<div class="right">NaOH</div>
-<div class="middle">NaCl + H₂O</div>
-</div><br/>
-<p>Let's move to <a href="https://cs1102-2526a.github.io/Experiment-3/">Experiment 3</a>a to see another acid-base reaction with DIY Indicator!</p>
+	<h2><u>Simulation</u></h2>
+		<p>Now, we can observe a neutralization reaction of HCl and NaOH with Universal Indicator by a simple animation.</p>
+		<p><span>Step 1:</span> Add the universal indicator solution to the same amount of HCl and NaOH respectively. </p>
+		<p><span>Step 2:</span> Mix the universal indicator solution with HCl, and the colour of HCl changes from transparent to pink, indicating that HCl is an acidic solution with a pH value of 2.</p>
+		<p><span>Step 3:</span> Mix the universal indicator solution with NaOH, and the colour of NaOH changes from transparent to purple, indicating that NaOH is an acidic solution with a pH value of 13.</p>
+		<p><span>Step 4:</span> Mix the two mixtures, and it becomes a green solution, which is a neutral solution (pH value of 7) after comparing it with the pH colour chart.</p><br/>
+        
+        <p><span>Click the button to check what color there is.</span></p>
+	<button onclick="startAnimation()">Check it now!</button>
+        <p>Please note that the colour of the mixture of universal indicator solution and chemical solution is determined by the chemical solution's concentration. The colour display in the simulation may differ from the real situation.</p>
+        
+        <div class="box">
+        <div class="drop-left"></div>
+        <div class="left">HCl</div>
+        <div class="drop-right"></div>
+        <div class="right">NaOH</div>
+        <div class="middle">NaCl + H₂O</div>
+        </div><br/>
+        
+                <script>
+                function startAnimation() {
+                const dropLeft = document.querySelector('.drop-left');
+                const left = document.querySelector('.left');
+                const dropRight = document.querySelector('.drop-right');
+                const right = document.querySelector('.right');
+                const middle = document.querySelector('.middle');
+                
+                dropLeft.classList.remove('drop-acid');
+                left.classList.remove('left-acid');
+                dropRight.classList.remove('drop-base');
+                right.classList.remove('right-base');
+                middle.classList.remove('middle-mixture');
+                            
+                void dropLeft.offsetHeight;
+                void left.offsetHeight;
+                void dropRight.offsetHeight;
+                void right.offsetHeight;
+                void middle.offsetHeight;
+                            
+                void dropLeft.offsetWidth;
+                void left.offsetWidth;
+                void dropRight.offsetWidth;
+                void right.offsetWidth;
+                void middle.offsetWidth;
+                
+                dropLeft.classList.add('drop-acid');
+                left.classList.add('left-acid');
+                dropRight.classList.add('drop-base');
+                right.classList.add('right-base');
+                middle.classList.add('middle-mixture');
+                }
+                </script>
 
+        <p>Let's move to <a href="https://cs1102-2526a.github.io/Experiment-3/">Experiment 3</a> to see the neutralisation reaction with Universal Indicator</p>
 
-<script>
-function startAnimation() {
-const dropLeft = document.querySelector('.drop-left');
-const left = document.querySelector('.left');
-const dropRight = document.querySelector('.drop-right');
-const right = document.querySelector('.right');
-const middle = document.querySelector('.middle');
-
-dropLeft.classList.remove('drop-acid');
-left.classList.remove('left-acid');
-dropRight.classList.remove('drop-base');
-right.classList.remove('right-base');
-middle.classList.remove('middle-mixture');
-            
-void dropLeft.offsetHeight;
-void left.offsetHeight;
-void dropRight.offsetHeight;
-void right.offsetHeight;
-void middle.offsetHeight;
-            
-void dropLeft.offsetWidth;
-void left.offsetWidth;
-void dropRight.offsetWidth;
-void right.offsetWidth;
-void middle.offsetWidth;
-
-dropLeft.classList.add('drop-acid');
-left.classList.add('left-acid');
-dropRight.classList.add('drop-base');
-right.classList.add('right-base');
-middle.classList.add('middle-mixture');
-}
-</script>
 </body>
 </html>
-
-
-
 
 
