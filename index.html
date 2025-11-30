@@ -38,7 +38,7 @@
         border-radius: 5px;
         }
         
-        .left {
+    .left {
         width: 100px;
         height: 100px;
         background-color: transparent;
@@ -49,7 +49,7 @@
         border: 2px solid grey;
         }
         
-        .drop-right {
+    .drop-right {
         width: 50px;
         height: 50px;
         background-color: rgb(165,161,18);
@@ -59,7 +59,7 @@
         border-radius: 5px;
         }
         
-        .right {
+    .right {
         width: 100px;
         height: 100px;
         background-color: transparent;
@@ -70,7 +70,7 @@
         border: 2px solid grey;
         }
                 
-        .middle {
+    .middle {
         width: 103px;
         height: 103px;
         background-color: transparent;
@@ -85,7 +85,7 @@
         color: white;
         }
         
-        .box {
+    .box {
         position: relative;
         height: 350px;
         width: 600px;
@@ -95,58 +95,58 @@
         border-radius: 10px;
         overflow: hidden;
         }
-        
-        @keyframes dropacid {
+    
+	@keyframes dropacid {
         0% {top: 50px;}
         40% {top: 125px; background-color: transparent;}
         100% {top: 125px; background-color: transparent;}
         }
         
-        @keyframes acid {
+    @keyframes acid {
         0% {top: 125px;}
         85% {top: 125px; background-color: pink; color: white;}
         100% {top: 125px; left: 250px; background-color: transparent; border: 2px solid transparent; color: transparent;}
         }
         
-        @keyframes dropbase {
+    @keyframes dropbase {
         0% {top: 50px;}
         40% {top: 125px; background-color: transparent;}
         100% {top: 125px; background-color: transparent;}
         }
         
-        @keyframes base {
+    @keyframes base {
         0% {top: 125px;}
         85% {top: 125px; background-color: purple; color: white;}
         100% {top: 125px; left: 250px; background-color:transparent; border: 2px solid transparent; color: transparent;}
         }
                 
-        @keyframes mixture {
+    @keyframes mixture {
         0% {top: 125px; background-color: transparent; color: transparent;}
         60% {top: 125px; background-color: transparent; color: transparent;}
         100% {top: 125px; background-color: green;}
         }
         
-        .drop-acid {
+    .drop-acid {
         animation: dropacid 2s forwards;
         }
         
-        .left-acid {
+    .left-acid {
         animation: acid 4s forwards;
         }
         
-        .drop-base {
+    .drop-base {
         animation: dropbase 2s forwards;
         }
         
-        .right-base {
+    .right-base {
         animation: base 4s forwards;
         }
                 
-        .middle-mixture {
+    .middle-mixture {
         animation: mixture 5s forwards;
         }
                 
-        .left, .drop-left, .drop-right, .right {
+    .left, .drop-left, .drop-right, .right {
         position: absolute;
         border-radius: 5px;
         display: flex;
@@ -190,7 +190,7 @@
 		<p>It is different from the litmus paper we have introduced in Experiment 1. Universal Indicator not only can find out whether the solution is an acid, an alkali or neutral, but also can determine the pH value (pH 0 to pH 14) of the solution by comparing it with the pH colour chart.</p> 
 		
         <img src="https://i0.wp.com/www.compoundchem.com/wp-content/uploads/2014/04/Colourful-Chemistry-Colours-of-pH-Indicators.png?ssl=1" alt="pH Indicator Colours" width="500"/>
- <p>(Source: Compound Interest <a href="https://www.compoundchem.com/2014/04/04/the-colours-chemistry-of-ph-indicators/ ">https://www.compoundchem.com/2014/04/04/the-colours-chemistry-of-ph-indicators/</a>)</p><br/>
+ 		<p>(Source: Compound Interest <a href="https://www.compoundchem.com/2014/04/04/the-colours-chemistry-of-ph-indicators/ ">https://www.compoundchem.com/2014/04/04/the-colours-chemistry-of-ph-indicators/</a>)</p><br/>
         
 	<h2><u>Simulation</u></h2>
 		<p>Now, we can observe a neutralization reaction of HCl and NaOH with Universal Indicator by a simple animation.</p>
@@ -245,10 +245,11 @@
                 }
                 </script>
 
-        <p>Let's move to <a href="https://cs1102-2526a.github.io/Experiment-3/">Experiment 3</a> to see the neutralisation reaction with Universal Indicator</p>
+        <p>Let's move to <a href="https://cs1102-2526a.github.io/Experiment-3/">Experiment 3</a> to see the acid-base reaction by using a DIY pH indicator!</p>
 
 </body>
 </html>
+
 
 
 
